@@ -1,1 +1,52 @@
-<p>home works!</p>
+<div class="container">
+  <div class="card-container">
+    <!--Donation-->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon income-icon"><mat-icon>attach_money</mat-icon></span>
+        <h2>Donation</h2>
+      </div>
+      <hr />
+      <div class="income-details">
+        <div class="month">
+          <h3>Last Few Days</h3>
+          <ul>
+            <li *ngFor="let todaysDonation of previousDaysDonation">
+              {{ todaysDonation }}
+            </li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>TO DAY</h3>
+          <p>{{ todaysDonation }}</p>
+        </div>
+        <button class="button" (click)="onDonation()">View</button>
+      </div>
+    </div>
+
+    <!--Expense-->
+
+    <div class="card">
+      <div class="card-header">
+        <span class="icon expense-icon"><mat-icon> money_off</mat-icon></span>
+        <h2>Expense</h2>
+      </div>
+      <hr />
+      <div class="expense-details">
+        <div class="month">
+          <h3>Last Few Days</h3>
+          <ul>
+            <li *ngFor="let todaysExpense of previousDaysExpense">
+              {{ todaysExpense }}
+            </li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>TO DAY</h3>
+          <p>{{ todaysExpense }}</p>
+        </div>
+        <button class="button" (click)="onExpense()">View</button>
+      </div>
+    </div>
+  </div>
+</div>

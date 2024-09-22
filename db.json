@@ -1,1 +1,16 @@
-{ "user": [] }
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": " Admin",
+      "password": "Test$1234",
+      "email": "test@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true,
+      "address": {
+        "area": "dhaka"
+      }
+    }
+  ]
+}
